@@ -71,12 +71,27 @@ Lungo.Section = (function(lng, undefined) {
     };
 
     var _sections = function() {
-        return _scope.find(ELEMENT.SECTION);
-    }
+        return _scope.filter(ELEMENT.SECTION);
+        //return _scoped(ELEMENT.SECTION);
+    };
 
     var _asides = function() {
-        return _scope.find(ELEMENT.ASIDE);
-    }
+        return _scope.filter(ELEMENT.ASIDE);
+        //return _scoped(ELEMENT.ASIDE);
+    };
+
+    var _scopeIsA = function(element) {
+      var filtered = _scope.filter(element);
+      return filtered !== undefined && filtered.attr('id') == _scope.attr('id');
+    };
+
+    var _scoped = function(element) {
+        if (_scopeIsA(element)) {
+            return _scope;
+        } else {
+            return _scope.filter(element);
+        }
+    };
 
     return {
         init: init,
