@@ -29,6 +29,13 @@ Lungo.Section = (function(lng, undefined) {
         _initAsides();
     };
 
+    var enchance = function(scope) {
+      lng.Events.attach(scope);
+      lng.Attributes.init(scope);
+      lng.Section.init(scope);
+      lng.Article.init(scope);
+    };
+
     var _initSections = function() {
         //@todo: position fixed
         //lng.Fallback.positionFixed(lng.Element.Cache.sections);
@@ -72,7 +79,8 @@ Lungo.Section = (function(lng, undefined) {
     }
 
     return {
-        init: init
+        init: init,
+        enchance: enchance
     };
 
 })(Lungo);
