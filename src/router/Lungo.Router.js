@@ -39,7 +39,7 @@ Lungo.Router = (function(lng, undefined) {
                 }
 
                 current.removeClass(CLASS.SHOW).addClass(CLASS.HIDE);
-                target.addClass(CLASS.SHOW);
+                target.addClass(CLASS.SHOW).removeClass(CLASS.HIDE);
                 lng.Element.Cache.section = target;
                 lng.Element.Cache.article = target.find(ELEMENT.ARTICLE + '.' + CLASS.CURRENT);
 
