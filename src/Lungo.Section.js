@@ -23,7 +23,7 @@ Lungo.Section = (function(lng, undefined) {
     var init = function(scope) {
         _scope = scope
         _cacheDOMElements();
-        //lng.Fallback.fixPositionInAndroid();
+        lng.Fallback.fixPositionInAndroid();
 
         _initSections();
         _initAsides();
