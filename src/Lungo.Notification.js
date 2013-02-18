@@ -127,7 +127,7 @@ Lungo.Notification = (function(lng, undefined) {
         _show(html_binded);
     };
 
-    var _init = function() {
+    var init = function() {
         lng.dom(SELECTOR.BODY).append(MARKUP_NOTIFICATION);
         _el = lng.dom(SELECTOR.NOTIFICATION);
         _window = _el.children('.window');
@@ -192,8 +192,6 @@ Lungo.Notification = (function(lng, undefined) {
         lng.dom(SELECTOR.WINDOW_CLOSABLE).tap( hide );
     };
 
-    _init();
-
     return {
         show: show,
         hide: hide,
@@ -202,7 +200,8 @@ Lungo.Notification = (function(lng, undefined) {
         success: success,
         confirm: confirm,
         html: html,
-        loading: loading
+        loading: loading,
+        init: init
     };
 
 })(Lungo);

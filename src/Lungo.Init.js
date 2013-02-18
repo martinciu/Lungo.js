@@ -17,4 +17,5 @@ Lungo.init = function(config) {
     Lungo.Boot.Data.init();
     Lungo.Boot.Section.init();
     Lungo.Boot.Article.init();
+    Lungo.Boot.Notification.init();
 };
